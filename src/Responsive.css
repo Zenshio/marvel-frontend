@@ -41,6 +41,22 @@
     margin: 5px 5px 0px 5px;
   }
 
+  .Characters-content .search-name,
+  .Comics-content .search-name {
+    width: 300px;
+  }
+
+  .Characters-content .search-name-input::placeholder,
+  .Comics-content .search-name-input::placeholder {
+    font-size: 18px;
+  }
+
+  .Home-content .character.main-page div.character-picture,
+  .Home-content .comic.main-page div.comic-picture {
+    height: 470px;
+    width: 300px;
+  }
+
   .Character-comics-info,
   .Character-comics-info .comic-description {
     padding: 20px;
@@ -51,8 +67,8 @@
   }
 
   .Character-info div.character-picture {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
   }
 
   .Character-comics .Character-comics-info:nth-child(odd) .FavStar {
@@ -64,8 +80,6 @@
   }
 
   .Pagination div {
-    min-width: 40px;
-    min-height: 40px;
-    margin: 0px 8px;
+    margin: 0px 2px;
   }
 }
