@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import FavStar from "../components/FavStar";
 
@@ -37,16 +37,20 @@ const Home = ({ favorites, setFavorites }) => {
           <h1>Welcome to the Marvel Universe!</h1>
           <div className="categories">
             <div className="Characters">
-              <div className="character main-page">
-                <CharacterPicture character={defaultCharacter} />
-                <div className="character-name">Browse Characters</div>
-              </div>
+              <Link to="/characters">
+                <div className="character main-page">
+                  <CharacterPicture character={defaultCharacter} />
+                  <div className="character-name">Browse Characters</div>
+                </div>
+              </Link>
             </div>
             <div className="Comics">
-              <div className="comic main-page">
-                <ComicPicture comic={defaultComic} />
-                <div className="comic-title">Leaf through Comics</div>
-              </div>
+              <Link to="/comics">
+                <div className="comic main-page">
+                  <ComicPicture comic={defaultComic} />
+                  <div className="comic-title">Leaf through Comics</div>
+                </div>
+              </Link>
             </div>
           </div>
           {(favoritesCharacters.length > 0 || favoritesComics.length > 0) && (

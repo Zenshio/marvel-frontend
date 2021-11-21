@@ -117,6 +117,10 @@ h2 {
   align-items: center;
 }
 
+.Home-content .categories a:hover {
+  color: black;
+}
+
 .Home-content .categories,
 .Home-content .favorites-characters,
 .Home-content .favorites-comics {
