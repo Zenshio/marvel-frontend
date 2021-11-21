@@ -416,6 +416,16 @@ h2 {
   transition: transform 0.5s ease;
 }
 
+.Character-comics-info div.comic-picture.nopic {
+  background-image: linear-gradient(#202020, black);
+  font-size: 160px;
+  color: white;
+  text-align: center;
+  line-height: 250px;
+  vertical-align: middle;
+  min-width: 165px;
+}
+
 .Character-comics .Character-comics-info:nth-child(even):hover {
   transform: rotate(1deg) scale(1.05);
   -webkit-transform: rotate(1deg) scale(1.05);
@@ -441,6 +451,7 @@ h2 {
 
 .Character-comics-info .comic-picture {
   height: 250px;
+  min-width: 165px;
 }
 
 .Character-comics-info .comic-details {
