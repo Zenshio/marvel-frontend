@@ -34,7 +34,7 @@ const Home = ({ favorites, setFavorites }) => {
     <main className="Home">
       <div className="container">
         <div className="Home-content">
-          <h1>Welcome to the Marvel Universe !</h1>
+          <h1>Welcome to the Marvel Universe!</h1>
           <div className="categories">
             <div className="Characters">
               <div className="character main-page">
@@ -53,7 +53,7 @@ const Home = ({ favorites, setFavorites }) => {
             <div className="favorites">
               {favoritesCharacters.length > 0 && (
                 <>
-                  <h2>Favorites Characters </h2>
+                  <h2>Favorite Characters </h2>
                   <div className="favorites-characters">
                     {favoritesCharacters.map((character) => {
                       return (
@@ -78,7 +78,7 @@ const Home = ({ favorites, setFavorites }) => {
               )}
               {favoritesComics.length > 0 && (
                 <>
-                  <h2>Favorites Comics </h2>
+                  <h2>Favorite Comics </h2>
                   <div className="favorites-comics">
                     {favoritesComics.map((comic) => {
                       return (

@@ -58,7 +58,7 @@ const Character = ({ favorites, setFavorites }) => {
             <div class="comics-dialog">
               {character.description
                 ? character.description
-                : "We're missing data about this one, if you manage to gather some info, please report back to us !"}
+                : "We're missing data about this one, if you manage to gather some info, please report back to us!"}
             </div>
             <img className="stan-lee" src={StanLee} alt="Stan Lee" />
           </div>

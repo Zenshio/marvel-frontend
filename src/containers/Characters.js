@@ -75,7 +75,7 @@ const Characters = ({ favorites, setFavorites }) => {
         </div>
         {data.count ? (
           <>
-            <div className="result-text">{data.count} answered your call !</div>
+            <div className="result-text">{data.count} answered your call!</div>
             <Pagination
               data={data}
               params={params}

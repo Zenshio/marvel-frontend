@@ -63,7 +63,7 @@ const Comics = ({ favorites, setFavorites }) => {
         {data.count ? (
           <>
             <div className="result-text">
-              {data.count} {data.count > 1 ? "are" : "is"} on our shelves !
+              {data.count} {data.count > 1 ? "are" : "is"} on our shelves!
             </div>
             <Pagination
               data={data}
