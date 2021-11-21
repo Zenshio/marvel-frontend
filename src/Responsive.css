@@ -1,0 +1,71 @@
+@media (max-width: 1400px) {
+  /* .container {
+    margin: 0px 20px;
+  } */
+}
+
+@media (max-width: 1024px) {
+  .Character-info {
+    flex-direction: column;
+  }
+  .Character-description,
+  .Character-comics-info {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    position: relative;
+  }
+  .comic-picture {
+    width: 165px;
+  }
+
+  .Character-comics .Character-comics-info .FavStar {
+    position: absolute;
+  }
+
+  .Character-comics .Character-comics-info:nth-child(odd) .FavStar {
+    right: 100px;
+  }
+
+  .Character-comics .Character-comics-info:nth-child(even) .FavStar {
+    left: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Header nav {
+    flex-direction: column;
+  }
+  .Header nav > div {
+    padding: 10px 10px;
+    margin: 5px 5px 0px 5px;
+  }
+
+  .Character-comics-info,
+  .Character-comics-info .comic-description {
+    padding: 20px;
+  }
+
+  .Character-description {
+    max-width: 100%;
+  }
+
+  .Character-info div.character-picture {
+    width: 400px;
+    height: 400px;
+  }
+
+  .Character-comics .Character-comics-info:nth-child(odd) .FavStar {
+    right: 50px;
+  }
+
+  .Character-comics .Character-comics-info:nth-child(even) .FavStar {
+    left: 50px;
+  }
+
+  .Pagination div {
+    min-width: 40px;
+    min-height: 40px;
+    margin: 0px 8px;
+  }
+}

@@ -1,0 +1,34 @@
+.Footer {
+  margin-top: auto;
+  position: relative;
+  height: 150px;
+  background-image: linear-gradient(#ec1d24, #8b1620);
+}
+
+.Footer-content {
+  text-align: center;
+  margin-top: 80px;
+  color: white;
+}
+
+.Footer-content div {
+  margin: 4px 0px;
+}
+
+.Footer a {
+  margin: 0px 8px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.Footer a:hover {
+  color: black;
+}
+
+.Footer svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2.5vw;
+  /* set height to pixels if you want angle to change with screen width */
+}

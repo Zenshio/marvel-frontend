@@ -1,1 +1,647 @@
 /* Other rules */
+
+:root {
+  /* --toastify-color-success: linear-gradient(#ec1d24, #8b1620) !important; */
+  --toastify-color-success: #ec1d24 !important;
+  --toastify-color-dark: linear-gradient(#202020, black) !important;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Bangers", cursive;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #202020;
+}
+
+::selection {
+  color: white;
+  background: #202020;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ec1d24;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #ec1d24;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+h1 {
+  font-size: 42px;
+  margin: 20px 0px;
+}
+
+h2 {
+  font-size: 32px;
+  margin: 20px 0px;
+}
+
+.result-text {
+  font-size: 18px;
+}
+
+.Home-content,
+.Characters-content,
+.Comics-content,
+.Character-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.Home-content .categories,
+.Home-content .favorites-characters,
+.Home-content .favorites-comics {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Home-content .character.main-page div.character-picture,
+.Home-content .comic.main-page div.comic-picture {
+  height: 650px;
+  width: 420px;
+}
+
+.Home-content .character.main-page .character-picture img {
+  object-position: -120px;
+}
+
+.Home-content .character.main-page .character-name,
+.Home-content .comic.main-page .comic-title {
+  font-size: 32px;
+}
+
+.Home-content .categories,
+.Home-content .character,
+.Home-content .comic,
+.Home-content .favorites-characters,
+.Home-content .favorites-comics {
+  height: 100%;
+  justify-content: center;
+}
+
+.Characters-results,
+.Comics-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Characters-content .search-name,
+.Comics-content .search-name {
+  margin: 25px;
+  width: 400px;
+  height: 60px;
+  padding: 5px 10px;
+  border: solid black;
+  border-color: black;
+  border-width: 3px 3px 5px 5px;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  background-color: white;
+  transform: rotate(-0.75deg);
+  -webkit-transform: rotate(-0.75deg) scale(0.9999);
+  -moz-transform: rotate(-0.75deg) scale(0.9999);
+  -o-transform: rotate(-0.75deg) scale(0.9999);
+  -ms-transform: rotate(-0.75deg) scale(0.9999);
+}
+
+.search-name-input {
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  outline: none;
+  border: none;
+}
+
+.character,
+.comic {
+  position: relative;
+}
+
+.character > div.character-picture,
+.Character-content div.character-picture {
+  margin: 25px;
+  width: 270px;
+  height: 270px;
+  background: black;
+  border: solid black;
+  border-color: black;
+  float: left;
+  overflow: hidden;
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(2deg);
+  -webkit-transform: rotate(2deg) scale(0.9999);
+  -moz-transform: rotate(2deg) scale(0.9999);
+  -o-transform: rotate(2deg) scale(0.9999);
+  -ms-transform: rotate(2deg) scale(0.9999);
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+
+.character > div.character-picture.nopic,
+.comic > div.comic-picture.nopic {
+  background-image: linear-gradient(#202020, black);
+  font-size: 230px;
+  color: white;
+  text-align: center;
+  line-height: 250px;
+  vertical-align: middle;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.comic > div.comic-picture.nopic {
+  line-height: 415px;
+}
+
+.character-picture img,
+.comic-picture img {
+  transform-origin: 100 100;
+  flex-shrink: 0;
+  min-height: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+
+.character:hover {
+  cursor: pointer;
+}
+
+.character:hover div.character-picture {
+  font-size: 240px;
+  transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+}
+
+.Home-content .character.main-page:hover div.character-picture,
+.comic:hover div.comic-picture {
+  font-size: 240px;
+
+  transform: scale(1.075);
+  -moz-transform: scale(1.075);
+  -webkit-transform: scale(1.075);
+}
+
+.character:hover img {
+  transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+}
+
+.comic:hover img,
+.Character-description .comics-dialog:hover,
+.Character-content .character-picture:hover,
+.Character-content .character-picture:hover img {
+  transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+}
+
+.character:hover .character-name,
+.comic:hover .comic-title {
+  background: gold;
+  transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+}
+
+.character-name,
+.comic-title {
+  transform: rotate(2deg);
+  margin: 15px;
+  padding: 2px 6px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  background: #ddd;
+  border: 1px solid #222;
+  box-shadow: 3px 3px 0 #222;
+  font-size: 20px;
+  transition: transform 0.5s ease;
+  -moz-transform: scale(0.9999);
+}
+
+.comic > div.comic-picture {
+  margin: 25px;
+  width: 270px;
+  height: 415px;
+  background: black;
+  border: solid black;
+  border-color: black;
+  float: left;
+  overflow: hidden;
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(2deg);
+  transition: transform 0.5s ease;
+  -moz-transform: rotate(2deg) scale(0.9999);
+}
+
+.Character-info,
+.Character-header,
+.Character-header h1 {
+  display: flex;
+}
+
+.Character-header {
+  width: 100%;
+  padding: 0px 40px;
+  justify-content: space-between;
+}
+
+.Character-header .go-back {
+  margin: 30px 0px;
+}
+
+.Character-header .go-back a:hover {
+  color: #ec1d24;
+}
+
+.Character-header .favstar-img {
+  margin-left: 10px;
+  margin-top: -6px;
+}
+
+.Character-info {
+  justify-content: center;
+  align-items: center;
+}
+
+.Character-info > div.character-picture {
+  margin: 25px;
+  width: 600px;
+  height: 600px;
+  background: black;
+  border: solid black;
+  border-color: black;
+  float: left;
+  overflow: hidden;
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(2deg);
+  -webkit-transform: rotate(2deg) scale(0.9999);
+  -moz-transform: rotate(2deg) scale(0.9999);
+  -o-transform: rotate(2deg) scale(0.9999);
+  -ms-transform: rotate(2deg) scale(0.9999);
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+
+.Character-info > div.character-picture.nopic {
+  background-image: linear-gradient(#202020, black);
+  font-size: 550px;
+  color: white;
+  text-align: center;
+  line-height: 560px;
+  vertical-align: middle;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.Character-info > div.character-picture.nopic:hover {
+  font-size: 600px;
+  transform: rotate(10deg) scale(1.05);
+  -webkit-transform: rotate(1deg) scale(1.05);
+  -moz-transform: rotate(1deg) scale(1.05);
+  -o-transform: rotate(1deg) scale(1.05);
+  -ms-transform: rotate(1deg) scale(1.05);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.Character-description {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Character-comics {
+  margin: 60px 20px;
+  width: 90%;
+}
+
+.Character-comics-info {
+  display: flex;
+  margin: 40px 0px;
+  border: 1px solid black;
+  background-image: linear-gradient(rgb(240, 240, 240), #ddd);
+  padding: 30px 80px;
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  transition: transform 0.5s ease;
+}
+
+.Character-comics .Character-comics-info:nth-child(even):hover {
+  transform: rotate(1deg) scale(1.05);
+  -webkit-transform: rotate(1deg) scale(1.05);
+  -moz-transform: rotate(1deg) scale(1.05);
+  -o-transform: rotate(1deg) scale(1.05);
+  -ms-transform: rotate(1deg) scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.Character-comics .Character-comics-info:nth-child(odd) {
+  flex-direction: row-reverse;
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+}
+.Character-comics .Character-comics-info:nth-child(odd):hover {
+  transform: rotate(1deg);
+  -webkit-transform: rotate(-1deg) scale(1.05);
+  -moz-transform: rotate(-1deg) scale(1.05);
+  -o-transform: rotate(-1deg) scale(1.05);
+  -ms-transform: rotate(-1deg) scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.Character-comics-info .comic-picture {
+  height: 250px;
+}
+
+.Character-comics-info .comic-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.Character-comics-info .comic-description {
+  padding: 30px 60px;
+  font-size: 18px;
+}
+
+.Character-comics .comic-title {
+  transform: rotate(1deg);
+  margin: 15px;
+  padding: 2px 6px;
+  bottom: 10px;
+  right: 10px;
+  position: inherit;
+  background: gold;
+  border: 1px solid #222;
+  box-shadow: 3px 3px 0 #222;
+  font-size: 20px;
+  transition: transform 0.5s ease;
+  -moz-transform: scale(0.9999);
+}
+
+.character .favstar-img,
+.comic .favstar-img {
+  position: absolute;
+  height: 60px;
+  top: 10px;
+  left: 14px;
+  transition: transform 0.5s ease;
+}
+
+.Character-content .favstar-img {
+  height: 60px;
+  transition: transform 0.5s ease;
+}
+
+.Character-content .favstar-img:hover {
+  height: 60px;
+  transform: rotate(-2deg) scale(1.25);
+  -webkit-transform: rotate(-2deg) scale(1.25);
+  -moz-transform: rotate(-2deg) scale(1.25);
+  -o-transform: rotate(-2deg) scale(1.25);
+  -ms-transform: rotate(-2deg) scale(1.25);
+  transition: transform 0.5s ease;
+}
+
+.favstar-img:hover {
+  cursor: pointer;
+}
+
+.character:hover .favstar-img,
+.comic:hover .favstar-img {
+  transform: rotate(-2deg) scale(1.25);
+  -webkit-transform: rotate(-2deg) scale(1.25);
+  -moz-transform: rotate(-2deg) scale(1.25);
+  -o-transform: rotate(-2deg) scale(1.25);
+  -ms-transform: rotate(-2deg) scale(1.25);
+  transition: transform 0.5s ease;
+}
+
+.comics-dialog {
+  /* -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%; */
+  text-align: center;
+  border: 1px solid #202020;
+  font-size: 26px;
+  border-width: 3px 3px 5px 5px;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  transform: rotate(-2deg);
+}
+
+.comics-dialog,
+.comics-thought {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  padding: 40px;
+  background-color: #fff;
+  margin: 80px 80px 30px;
+  -webkit-filter: drop-shadow(0 4px 0 #202020);
+  filter: drop-shadow(0 4px 0 #202020);
+  -moz-transition: 2s;
+  -o-transition: 2s;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.comics-dialog:after {
+  width: 200px;
+  height: 70px;
+  right: 2px;
+  bottom: -85px;
+  border-right: 90px solid #fff;
+  -moz-border-radius-bottomright: 370px 200px;
+  -webkit-border-bottom-right-radius: 370px 200px;
+  border-bottom-right-radius: 370px 200px;
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+
+.comics-dialog:after,
+.comics-thought:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+.stan-lee {
+  height: 300px;
+  width: 300px;
+  align-self: center;
+}
+
+/* ================================================================= PAGINATION ================================================================= */
+
+.Pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+.Pagination div {
+  min-width: 40px;
+  min-height: 40px;
+  margin: 0px 20px;
+}
+
+.Pagination div.pagination-page {
+  border: solid black;
+  border-color: black;
+  border-width: 2px 3px 2px 4px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+  text-align: center;
+  line-height: 40px;
+  vertical-align: middle;
+  -moz-transform: scale(0.9999);
+}
+
+.Pagination div.current-page {
+  color: white;
+  background-color: black;
+  background-image: linear-gradient(#202020, black);
+}
+.Pagination div.pagination-page:hover:not(.current-page) {
+  color: white;
+  background-color: #ec1d24;
+  background-image: linear-gradient(#ec1d24, #8b1620);
+  cursor: pointer;
+}
+
+.E404-content .e404-text {
+  font-size: 20px;
+  text-align: center;
+}
+
+.E404-content .e404-picture,
+.Noresults .Noresults-picture {
+  height: 600px;
+}
+
+.E404-content img,
+.Noresults img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.E404-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.E404 button {
+  outline: none;
+  border: solid black;
+  border-color: black;
+  border-width: 2px 3px 2px 4px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  font-size: 22px;
+  padding: 10px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.E404 button:hover {
+  background-image: linear-gradient(#ec1d24, #8b1620);
+}
+
+.E404 button:hover a {
+  color: white;
+}
